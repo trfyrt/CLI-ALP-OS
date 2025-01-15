@@ -1,4 +1,4 @@
-# Python CLInese
+# Python CLInese - 命令行界面
 Aplikasi CLInese merupakan sebuah program Command-Line Interface (CLI) sederhana yang dirancang untuk meniru fungsi-fungsi dasar shell atau terminal pada sistem operasi Linux. Selain itu, aplikasi ini dilengkapi dengan berbagai fitur tambahan untuk memperluas fungsionalitasnya.
 
 
