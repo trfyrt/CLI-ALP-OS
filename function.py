@@ -107,16 +107,14 @@ Extra Command List:
     
 # EXTRA COMMAND
 
-def tree(path=".", indent=0):
+def tree(path=".", level=0):
+    """Display the directory structure as a tree."""
     try:
-        items = os.listdir(path)
-        for item in items:
-            item_path = os.path.join(path, item)
-            # Tampilkan item dengan indentation
-            print(" " * indent + "'--→ " + item)
-            # Jika item adalah directory, rekursi ke dalamnya
-            if os.path.isdir(item_path):
-                tree(item_path, indent + 4)
+        for entry in os.listdir(path):
+            print("  " * level + f"|- {entry}")
+            full_path = os.path.join(path, entry)
+            if os.path.isdir(full_path):
+                tree(full_path, level + 1)
     except Exception as e:
         print(f"Error: {e}")
 
@@ -131,11 +129,7 @@ def quotes():
         '气贯长虹!',
         'Gōngxǐ fācái'
         ]
-    print(suntzu)
-    print(f'''
-~ A Wise Chinese once said,
-    "\033[90m{random.choice(quotes)}\033[0m" ~
-    ''')
+    suntzu(random.choice(quotes))
 
 def hongbao():
     uang = [qr, seratus, limpul, dupul, sepuluh, zonk]
