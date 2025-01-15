@@ -121,15 +121,16 @@ def tree(path=".", indent=0):
         print(f"Error: {e}")
 
 def quotes():
-    quotes = ['Tuntutlah ilmu sampai ke negeri China',
+    quotes = [
+        'Tuntutlah ilmu sampai ke negeri China',
         '千里之行，始于足下。',
         '失败是成功之母。',
         '活到老，学到老。',
         '时间就是金钱。',
         '与其临渊羡鱼，不如退而结网。',
         '气贯长虹!',
-        'Gōngxǐ fācái']
-    
+        'Gōngxǐ fācái'
+        ]
     print(suntzu)
     print(f'''
 ~ A Wise Chinese once said,
