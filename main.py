@@ -2,6 +2,7 @@ from function import *
 
 while True:
     try:
+        music()
         user_input = input("命令行界面> ").strip().split()
         
         command = user_input[0]

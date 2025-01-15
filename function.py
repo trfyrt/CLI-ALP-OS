@@ -1,6 +1,7 @@
 import os
 import sys
 import shutil
+from playsound import playsound
 from ascii import *
 
 def ls():
@@ -75,6 +76,7 @@ def clear():
 
 def exit():
     try:
+        clear()
         xijinping()
         print("Exiting. 谢谢, 再见!")
         sys.exit()
@@ -99,5 +101,5 @@ def help():
     
 # << EXTRA >>
 
-def credit():
-    print('Aaron Jevon Benedict Kongdoh AKA Trefy 亚伦')
+def music():
+    playsound("sound/theme.mp3")
