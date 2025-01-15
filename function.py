@@ -99,9 +99,9 @@ def help():
     exit: Exit from Clinese
 
 Extra Command List:
-    tree: Display directory tree
-    quotes: Display most impactful Chinese Quotes
-    
+    tree: Display directory tree.
+    quotes: Display most impactful Chinese Quotes.
+    hongbao: Gacha ampao.
     ''')
 
     
@@ -134,7 +134,9 @@ def quotes():
     print(suntzu)
     print(f'''
 ~ A Wise Chinese once said,
-    "{random.choice(quotes)}" ~
+    "\033[90m{random.choice(quotes)}\033[0m" ~
     ''')
 
-# def hongbao():
+def hongbao():
+    uang = [qr, seratus, limpul, dupul, sepuluh, zonk]
+    print(random.choice(uang))

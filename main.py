@@ -4,7 +4,7 @@ print(emoji1)
 print(welcome)
 while True:
     try:
-        user_input = input("命令行界面> ").strip().split()
+        user_input = input("\033[31m命令行界面>\033[0m ").strip().split()
         
         command = user_input[0]
         args = user_input[1:]
@@ -38,6 +38,8 @@ while True:
                 tree()
             case 'quotes':
                 quotes()
+            case 'hongbao' | 'angpao' | 'ampao':
+                hongbao()
             case _:
                 print('Unknown command. Type help or h for available commands.')
 
