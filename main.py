@@ -1,8 +1,9 @@
 from function import *
 
+print(emoji1)
+print(welcome)
 while True:
     try:
-        music()
         user_input = input("命令行界面> ").strip().split()
         
         command = user_input[0]
@@ -33,6 +34,10 @@ while True:
                 exit()
             case 'help' | 'h':
                 help()
+            case 'tree':
+                tree()
+            case 'quotes':
+                quotes()
             case _:
                 print('Unknown command. Type help or h for available commands.')
 

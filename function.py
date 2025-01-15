@@ -1,7 +1,7 @@
 import os
 import sys
 import shutil
-from playsound import playsound
+import random
 from ascii import *
 
 def ls():
@@ -77,8 +77,8 @@ def clear():
 def exit():
     try:
         clear()
-        xijinping()
-        print("Exiting. 谢谢, 再见!")
+        print(xijinping)
+        print(thankyou)
         sys.exit()
     except Exception as e:
         print(f"Error: {e}")
@@ -96,10 +96,44 @@ def help():
     mv: Moving or renaming files/directories.
     help: Displays a list of existing commands and their functions..
     clear: Clearing the terminal screen.
-    exit: Exit from 命令行界面!''')
+    exit: Exit from Clinese
+
+Extra Command List:
+    tree: Display directory tree
+    quotes: Display most impactful Chinese Quotes
+    
+    ''')
 
     
-# << EXTRA >>
+# EXTRA COMMAND
 
-def music():
-    playsound("sound/theme.mp3")
+def tree(path=".", indent=0):
+    try:
+        items = os.listdir(path)
+        for item in items:
+            item_path = os.path.join(path, item)
+            # Tampilkan item dengan indentation
+            print(" " * indent + "'--→ " + item)
+            # Jika item adalah directory, rekursi ke dalamnya
+            if os.path.isdir(item_path):
+                tree(item_path, indent + 4)
+    except Exception as e:
+        print(f"Error: {e}")
+
+def quotes():
+    quotes = ['Tuntutlah ilmu sampai ke negeri China',
+        '千里之行，始于足下。',
+        '失败是成功之母。',
+        '活到老，学到老。',
+        '时间就是金钱。',
+        '与其临渊羡鱼，不如退而结网。',
+        '气贯长虹!',
+        'Gōngxǐ fācái']
+    
+    print(suntzu)
+    print(f'''
+~ A Wise Chinese once said,
+    "{random.choice(quotes)}" ~
+    ''')
+
+# def hongbao():
