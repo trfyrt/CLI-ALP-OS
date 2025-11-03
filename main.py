@@ -2,6 +2,8 @@ from function import *
 
 print(emoji1)
 print(welcome)
+balance = 0
+
 while True:
     try:
         user_input = input("\033[31m命令行界面>\033[0m ").strip().split()
@@ -39,7 +41,10 @@ while True:
             case 'quotes':
                 quotes()
             case 'hongbao' | 'angpao' | 'ampao':
-                hongbao()
+                balance = hongbao(balance)
+                print(f"Your current balance is: {balance} 元")
+            case 'balance':
+                print(f"Your current balance is: {balance} 元")
             case _:
                 print('Unknown command. Type help or h for available commands.')
 

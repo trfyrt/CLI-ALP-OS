@@ -145,7 +145,37 @@ def quotes():
         ]
     suntzu(random.choice(quotes))
 
-def hongbao():
+def hongbao(balance):
     """Gacha ampao."""
-    uang = [qr, limratus, seratus, limpul, dupul, sepuluh, zonk]
-    print(random.choice(uang))
+    uang = ["qr", "limratus", "seratus", "limpul", "dupul", "sepuluh", "zonk"]
+    uangchosen = random.choice(uang)
+    
+    match uangchosen:
+        case "qr":
+            print(qr)
+            balance -=10000
+            return balance
+        case "limratus":
+            print(limratus)
+            balance +=500000
+            return balance
+        case "seratus":
+            print(seratus)
+            balance +=100000
+            return balance
+        case "limpul":
+            print(limpul)
+            balance +=50000
+            return balance
+        case "dupul":
+            print(dupul)
+            balance +=20000
+            return balance
+        case "sepuluh":
+            print(sepuluh)
+            balance +=10000
+            return balance
+        case "zonk":
+            print(zonk)
+            return balance
+            
